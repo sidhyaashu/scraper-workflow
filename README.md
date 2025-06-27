@@ -20,7 +20,7 @@ flowchart TD
     Controller -->|Configure| Init[Initialize LLM, Search Tool, Memory]
     Controller -->|Search| SearchModule[Tavily Search API]
     Controller -->|Scrape| ScraperModule[ScrapeGraph API via scrapegraph_py]
-    Controller -->|Generate| LLMModule[Gemini Pro (Google GenAI)]
+    Controller -->|Generate| LLMModule[Gemini]
     LLMModule -->|Response| UI
     ScraperModule -->|Store Data| MemorySaver
     Controller -->|Save Messages| SessionState[Streamlit SessionState]
